@@ -15,6 +15,15 @@ body {
 .bg-navy {
     background-color: #084B66; /* Deep sea */
 }
+.bg-sea-glass {
+    background-color: #DFF5FD; /* Sea glass card */
+}
+.border-sea {
+    border: 1px solid #9BD8EE;
+}
+.hero-overlay {
+    background: linear-gradient(180deg, rgba(77, 184, 220, 0.4) 0%, rgba(0, 0, 0, 0) 50%, rgba(8, 75, 102, 0.65) 100%);
+}
 /* Style for the animated sea waves canvas */
 #particles-canvas {
     position: fixed;
