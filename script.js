@@ -90,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
             { base: 0.90, amp: 20, freq: 0.010, speed: 0.8, alpha: 0.22, color: '#1B8BB8' },
         ];
         let time = 0;
+        let animFrameId;
+
 
         function resizeCanvas() {
             canvas.width = window.innerWidth;
@@ -114,10 +116,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 ctx.fill();
             });
             time += 0.02;
-            requestAnimationFrame(drawWaves);
+            animFrameId = requestAnimationFrame(drawWaves);
         }
 
         drawWaves();
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                cancelAnimationFrame(animFrameId);
+            } else {
+                animFrameId = requestAnimationFrame(drawWaves);
+            }
+        });
     }
 });
 
