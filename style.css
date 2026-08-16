@@ -1,19 +1,19 @@
 /* Custom styles for our Japanese Sea theme */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, #EAF9F7 0%, #C5E8EE 55%, #9FD0E2 100%);
+    background: linear-gradient(180deg, #EFFCFF 0%, #BEEFF8 50%, #7FD4EC 100%);
     background-attachment: fixed;
-    color: #123C4F; /* Deep ocean */
+    color: #084B66; /* Deep summer sea */
 }
 .font-anime {
     font-family: 'Mochiy Pop One', sans-serif;
 }
 .text-sakura {
-    color: #E85D8F; /* Vibrant Cherry Blossom Pink */
+    color: #0E7FA3; /* Summer Sea Azure */
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .bg-navy {
-    background-color: #0F3E52; /* Deep sea */
+    background-color: #084B66; /* Deep sea */
 }
 /* Style for the falling petals canvas */
 #sakura-canvas {
