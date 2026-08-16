@@ -8,7 +8,7 @@ body {
 .font-anime {
     font-family: 'Mochiy Pop One', sans-serif;
 }
-.text-sakura {
+.text-sea-accent {
     color: #0E7FA3; /* Summer Sea Azure */
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
@@ -31,7 +31,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 5;
+    z-index: 0;
     pointer-events: none; /* Allows clicks to go through the canvas */
 }
 /* For hiding the scrollbar */

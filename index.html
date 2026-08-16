@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,20 +19,14 @@
 
   <!-- Link to your new external CSS file -->
   <link rel="stylesheet" href="style.css">
-  <!-- IMPORTANT: Replace with a real image link after you upload it -->
-  <meta property="og:image" content="https://placehold.co/1200x630/87CEEB/FFFFFF?text=A+Surprise+For+[Name]">
+  <meta property="og:image" content="img/first selfie together.jpeg">
 </head>
 <body>
-<!-- Canvas for the falling cherry blossoms -->
+<!-- Canvas for the animated sea waves -->
 <canvas id="particles-canvas"></canvas>
 
 <!-- Section 1: Hero Welcome -->
 <header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
-  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
-    <source src="img/sa.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
   <div class="absolute inset-0 hero-overlay"></div>
 
   <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
@@ -43,11 +37,11 @@
 </header>
 
 <!-- Main Content -->
-<main class="container mx-auto p-6 md:p-12">
+<main class="container mx-auto p-6 md:p-12 relative z-10">
 
   <!-- Section 2: A Letter For You -->
   <section class="my-16 md:my-24 max-w-3xl mx-auto text-center" data-aos="fade-up">
-    <h2 class="text-4xl md:text-5xl font-anime text-sakura mb-8 drop-shadow-sm">A Special Message For You</h2>
+    <h2 class="text-4xl md:text-5xl font-anime text-sea-accent mb-8 drop-shadow-sm">A Special Message For You</h2>
     <div class="text-left text-lg leading-relaxed space-y-4 bg-sea-glass border-sea p-8 rounded-lg shadow-lg">
       <p>Selamat ulang tahun Chika sayang!</p>
       <p>Sekali lagi terima kasih ya sayang udah hadir di hidup aku dan sayang sama akuuuu. Aku senang sekali jalan-jalan sama kamu di Jepang.</p>
@@ -76,7 +70,7 @@
         <img src="img/first meet.jpeg" alt="Add photo 1" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white"> <!--replce img1.png with name of your img-->
         <div class="text-center md:text-left">
           <!-- TODO: Customize the date and story -->
-          <h3 class="text-2xl font-anime text-sakura">First Meet</h3>
+          <h3 class="text-2xl font-anime text-sea-accent">First Meet</h3>
           <p class="mt-2 text-lg">Kaget banget ada yang cantik, sampai mikir kalau Nat2 ada dendam pribadi wkwkwkwkwk</p>
             <br>
         </div>
@@ -87,7 +81,7 @@
         <img src="img/first selfie.jpg" alt="Add photo 2" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
         <div class="text-center md:text-right">
           <!-- TODO: Customize the date and story -->
-          <h3 class="text-2xl font-anime text-sakura">First Selfie 🥺</h3>
+          <h3 class="text-2xl font-anime text-sea-accent">First Selfie 🥺</h3>
           <p class="mt-2 text-lg">Seneng banget meskipun one time wkwkwk! Point+++++</p>
          <br>
         </div>
@@ -96,7 +90,7 @@
       <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
         <img src="img/first long call.png" alt="Add photo 3" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-anime text-sakura">First Long Call 😍</h3>
+          <h3 class="text-2xl font-anime text-sea-accent">First Long Call 😍</h3>
           <p class="mt-2 text-lg">Another achievement bisa call berjam-jam sama kamu, dan bikin kamu ketawa</p>
          <br>
         </div>
@@ -105,7 +99,7 @@
       <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
         <img src="img/first selfie together.jpeg" alt="Add photo4" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
         <div class="text-center md:text-right">
-          <h3 class="text-2xl font-anime text-sakura">First Selfie Together 🥰</h3>
+          <h3 class="text-2xl font-anime text-sea-accent">First Selfie Together 🥰</h3>
           <p class="mt-2 text-lg">And finally we made it to our first trip 🥺</p>
             <br>
         </div>
@@ -114,7 +108,7 @@
       <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
         <img src="img/first goodbye.jpg" alt="Add photo 3" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
         <div class="text-center md:text-left">
-          <h3 class="text-2xl font-anime text-sakura">First Goodbye 😢</h3>
+          <h3 class="text-2xl font-anime text-sea-accent">First Goodbye 😢</h3>
           <p class="mt-2 text-lg">So sad that it had to end, but we'll meet again for sure 🤗</p>
          <br>
         </div>
@@ -128,10 +122,10 @@
     <div class="relative">
       <!-- Scroll Buttons -->
       <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sea-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
       </button>
       <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sea-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
       </button>
 
       <!-- Scrollable Container -->
@@ -141,7 +135,7 @@
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="100">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
               <img src="img/image1.png" alt="Photo 1" class="w-full h-80 object-cover rounded-md mb-4"> 
-              <h3 class="text-2xl font-anime text-sakura">Photo 1</h3>
+              <h3 class="text-2xl font-anime text-sea-accent">Photo 1</h3>
               <p class="mt-2">"Caption 1”"</p>
             </div>
           </div>
@@ -149,7 +143,7 @@
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="200">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
               <img src="img/image2.png" alt="Photo 2" class="w-full h-80 object-cover rounded-md mb-4">
-              <h3 class="text-2xl font-anime text-sakura">Photo 2</h3>
+              <h3 class="text-2xl font-anime text-sea-accent">Photo 2</h3>
               <p class="mt-2">"Caption 2"</p>
             </div>
           </div>
@@ -157,7 +151,7 @@
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="300">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
               <img src="img/image3.png" alt="Photo 3" class="w-full h-80 object-cover rounded-md mb-4">
-              <h3 class="text-2xl font-anime text-sakura">Photo 3</h3>
+              <h3 class="text-2xl font-anime text-sea-accent">Photo 3</h3>
               <p class="mt-2">"Caption 3"</p>
             </div>
           </div>
@@ -165,7 +159,7 @@
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="400">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
               <img src="img/image4.png" alt="Photo 4" class="w-full h-80 object-cover rounded-md mb-4">
-              <h3 class="text-2xl font-anime text-sakura">Photo 4</h3>
+              <h3 class="text-2xl font-anime text-sea-accent">Photo 4</h3>
               <p class="mt-2">"Caption 4"</p>
             </div>
           </div>
@@ -173,7 +167,7 @@
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="500">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
               <img src="img/image5.png" alt="Photo 5" class="w-full h-80 object-cover rounded-md mb-4">
-              <h3 class="text-2xl font-anime text-sakura">Photo 5</h3>
+              <h3 class="text-2xl font-anime text-sea-accent">Photo 5</h3>
               <p class="mt-2">"Caption 5"</p>
             </div>
           </div>
@@ -181,7 +175,7 @@
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
             <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
               <img src="img/image6.png" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
-              <h3 class="text-2xl font-anime text-sakura">Photo 6</h3>
+              <h3 class="text-2xl font-anime text-sea-accent">Photo 6</h3>
               <p class="mt-2">"Caption 6"</p>
             </div>
           </div>
@@ -244,7 +238,7 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-navy text-white p-8 text-center">
+<footer class="bg-navy text-white p-8 text-center relative z-10">
   <p>I love you so much! ❤️</p>
   <p class="text-sm opacity-70 mt-2">Hope you liked it...</p>
 </footer>
