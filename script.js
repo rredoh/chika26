@@ -80,12 +80,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // --- Sakura Petal Animation ---
-    const canvas = document.getElementById('sakura-canvas');
+    // --- Sea Bubble Animation (Japanese Summer) ---
+    const canvas = document.getElementById('particles-canvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
-        let petals = [];
-        const numPetals = 50;
+        let bubbles = [];
+        const numBubbles = 45;
 
         function resizeCanvas() {
             canvas.width = window.innerWidth;
@@ -94,59 +94,62 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
-        function Petal() {
+        function Bubble() {
             this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height * 2 - canvas.height;
-            this.w = 25 + Math.random() * 15;
-            this.h = 20 + Math.random() * 10;
-            this.opacity = this.w / 40;
-            this.flip = Math.random();
-            this.xSpeed = 1.5 + Math.random() * 2;
-            this.ySpeed = 1 + Math.random() * 1;
-            this.flipSpeed = Math.random() * 0.03;
+            this.y = canvas.height + 20 + Math.random() * canvas.height;
+            this.r = 4 + Math.random() * 14;
+            this.opacity = 0.15 + Math.random() * 0.35;
+            this.xSpeed = (Math.random() - 0.5) * 0.6;
+            this.ySpeed = 0.6 + Math.random() * 1.2;
+            this.wobble = Math.random() * Math.PI * 2;
+            this.wobbleSpeed = 0.02 + Math.random() * 0.03;
         }
 
-        Petal.prototype.draw = function() {
-            if (this.y > canvas.height || this.x > canvas.width) {
-                this.x = -this.w;
-                this.y = Math.random() * canvas.height * 2 - canvas.height;
-                this.xSpeed = 1.5 + Math.random() * 2;
-                this.ySpeed = 1 + Math.random() * 1;
-                this.flip = Math.random();
+        Bubble.prototype.draw = function() {
+            if (this.y < -30) {
+                this.y = canvas.height + 20 + Math.random() * canvas.height;
+                this.x = Math.random() * canvas.width;
             }
+            this.wobble += this.wobbleSpeed;
+            this.x += this.xSpeed + Math.sin(this.wobble) * 0.5;
+            this.y -= this.ySpeed;
+
             ctx.globalAlpha = this.opacity;
             ctx.beginPath();
-            ctx.moveTo(this.x, this.y);
-            ctx.bezierCurveTo(this.x + this.w / 2, this.y - this.h / 2, this.x + this.w, this.y, this.x + this.w / 2, this.y + this.h / 2);
-            ctx.bezierCurveTo(this.x, this.y + this.h, this.x - this.w / 2, this.y, this.x, this.y);
-            ctx.closePath();
-            ctx.fillStyle = '#FFB7C5';
+            ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fill();
+            ctx.globalAlpha = Math.min(1, this.opacity + 0.2);
+            ctx.strokeStyle = '#8EDCF2';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+            ctx.globalAlpha = 1;
+            ctx.beginPath();
+            ctx.arc(this.x - this.r * 0.35, this.y - this.r * 0.35, this.r * 0.2, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255,255,255,0.9)';
             ctx.fill();
         }
 
-        Petal.prototype.update = function() {
-            this.x += this.xSpeed;
-            this.y += this.ySpeed;
-            this.flip += this.flipSpeed;
+        Bubble.prototype.update = function() {
             this.draw();
         }
 
-        function createPetals() {
-            petals = [];
-            for (let i = 0; i < numPetals; i++) {
-                petals.push(new Petal());
+        function createBubbles() {
+            bubbles = [];
+            for (let i = 0; i < numBubbles; i++) {
+                bubbles.push(new Bubble());
             }
         }
 
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            petals.forEach(petal => {
-                petal.update();
+            bubbles.forEach(bubble => {
+                bubble.update();
             });
             requestAnimationFrame(animate);
         }
 
-        createPetals();
+        createBubbles();
         animate();
     }
 });

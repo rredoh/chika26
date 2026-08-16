@@ -15,8 +15,8 @@ body {
 .bg-navy {
     background-color: #084B66; /* Deep sea */
 }
-/* Style for the falling petals canvas */
-#sakura-canvas {
+/* Style for the rising sea bubbles canvas */
+#particles-canvas {
     position: fixed;
     top: 0;
     left: 0;
