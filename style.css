@@ -15,7 +15,7 @@ body {
 .bg-navy {
     background-color: #084B66; /* Deep sea */
 }
-/* Style for the rising sea bubbles canvas */
+/* Style for the animated sea waves canvas */
 #particles-canvas {
     position: fixed;
     top: 0;
