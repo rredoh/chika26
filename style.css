@@ -1,8 +1,10 @@
 /* Custom styles for our Japanese Sea theme */
+html {
+    background: linear-gradient(180deg, #EFFCFF 0%, #BEEFF8 50%, #7FD4EC 100%);
+    min-height: 100%;
+}
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, #EFFCFF 0%, #BEEFF8 50%, #7FD4EC 100%);
-    background-attachment: fixed;
     color: #084B66; /* Deep summer sea */
 }
 .font-anime {
