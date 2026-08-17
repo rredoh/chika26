@@ -2,10 +2,13 @@
 html {
     background: linear-gradient(180deg, #EFFCFF 0%, #BEEFF8 50%, #7FD4EC 100%);
     min-height: 100%;
+    overflow-x: hidden;
 }
 body {
     font-family: 'Poppins', sans-serif;
     color: #084B66; /* Deep summer sea */
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 .font-anime {
     font-family: 'Mochiy Pop One', sans-serif;
